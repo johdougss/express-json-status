@@ -89,7 +89,7 @@ app.listen(3000);
 output [http://localhost:3000/addformat](http://localhost:3000/addformat): 
 ```json
 {
-	"500": "Internal Server Error"
+	"500": "Internal Server Error",
 	"data": {
 		"error": "user null"
 	}
