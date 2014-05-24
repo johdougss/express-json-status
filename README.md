@@ -11,11 +11,8 @@ npm install --save json-response
 var expressJsonStatus = require('express-json-status');
 var HTTPStatus = expressJsonStatus.HTTPStatus;
 ```
-```js
-res.json(500, {msg:'sucess'});
-```
 
-##Example - simple 
+##Usage
 
 ```js
 require('express-json-status');
@@ -37,28 +34,61 @@ app.listen(3000);
 
 
 ```
-output http://localhost:3000/: 
+output [http://localhost:3000/](http://localhost:3000/): 
 
 ```json
 {
-	status: 200,
-	description: "OK",
-	data: {
-		name: "john"
+	"status": "200",
+	"description": "OK",
+	"data": {
+		"name": "john"
 	}
 }
 
 ```
-output http://localhost:3000/add: 
+output [http://localhost:3000/add](http://localhost:3000/add): 
 ```json
 {
-	status: 500
-	description: "Internal Server Error"
-	data: {
-		error: 'user null'
+	"status": "500"
+	"description": "Internal Server Error"
+	"data": {
+		"error": "user null"
 	}
 }
 
 ```
 
-##Example - Custom output json
+
+##Custom output json
+
+```js
+var expressJsonStatus = require('express-json-status');
+var HTTPStatus = expressJsonStatus.HTTPStatus;
+var express = require('express'), app = express();
+
+
+expressJsonStatus.format = function(statusCode, description, data){
+	var a = {};
+	a[statusCode] = description;
+	a.data = data;
+	return a;
+};
+
+app.get('/addformat', function (req, res) {
+	var user = null;
+	if(user==null)
+		return res.jsons(HTTPStatus.INTERNAL_SERVER_ERROR, {error: 'user null'});
+	res.json({msg:'sucess'})
+});
+
+app.listen(3000);
+
+```
+output [http://localhost:3000/addformat](http://localhost:3000/addformat): 
+```json
+{
+	"500": "Internal Server Error"
+	"data": {
+		"error": "user null"
+	}
+}
