@@ -1,6 +1,6 @@
 {
   "name": "express-json-status",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "format the json response including HTTP status and description",
   "main": "index.js",
   "scripts": {},
