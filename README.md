@@ -29,7 +29,7 @@ app.get('/add', function (req, res) {
 	var user = null;
 	if(user==null)
 		return res.jsons(500, {error: 'user null'});
-	res.json({msg:'sucess'})
+	res.jsons({msg:'sucess'})
 });
 
 app.listen(3000);
@@ -52,7 +52,7 @@ output [http://localhost:3000/add](http://localhost:3000/add):
 ```json
 {
 	"status": "500",
-	"description": "Internal Server Error"
+	"description": "Internal Server Error",
 	"data": {
 		"error": "user null"
 	}
