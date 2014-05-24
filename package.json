@@ -1,0 +1,25 @@
+{
+  "name": "express-json-status",
+  "version": "0.0.0",
+  "description": "format the json response including HTTP status and description",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnathansantos/joh-module-name.git"
+  },
+  "keywords": [
+    "npm",
+    "module"
+  ],
+  "author": "Johnathan Douglas Souza Santos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnathansantos/joh-module-name/issues"
+  },
+  "homepage": "https://github.com/johnathansantos/joh-module-name",
+  "dependencies": {
+    "http-status": "~0.1.6",
+    "express": "~4.3.1",
+  }
+}
