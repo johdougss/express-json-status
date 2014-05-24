@@ -6,7 +6,7 @@
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/johnathansantos/joh-module-name.git"
+    "url": "https://github.com/johnathansantos/express-json-status.git"
   },
   "keywords": [
     "npm",
@@ -15,9 +15,9 @@
   "author": "Johnathan Douglas Souza Santos",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/johnathansantos/joh-module-name/issues"
+    "url": "https://github.com/johnathansantos/express-json-status/issues"
   },
-  "homepage": "https://github.com/johnathansantos/joh-module-name",
+  "homepage": "https://github.com/johnathansantos/express-json-status",
   "dependencies": {
     "http-status": "~0.1.6",
     "express": "~4.3.1",
