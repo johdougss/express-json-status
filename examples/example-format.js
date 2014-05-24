@@ -14,7 +14,7 @@ app.get('/addformat', function (req, res) {
 	var user = null;
 	if(user==null)
 		return res.jsons(HTTPStatus.INTERNAL_SERVER_ERROR, {error: 'user null'});
-	res.json({msg:'sucess'})
+	res.jsons({msg:'sucess'})
 });
 
 app.listen(3000);
