@@ -1,0 +1,7 @@
+.git*
+*.log
+examples/
+test/
+.DS_Store
+.travis.yml
+Contributing.md

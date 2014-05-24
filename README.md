@@ -1,6 +1,8 @@
 express-json-status
 ===============
 
+Format the json response including HTTP status and description
+
 ## Installation
 
 ```sh
@@ -49,7 +51,7 @@ output [http://localhost:3000/](http://localhost:3000/):
 output [http://localhost:3000/add](http://localhost:3000/add): 
 ```json
 {
-	"status": "500"
+	"status": "500",
 	"description": "Internal Server Error"
 	"data": {
 		"error": "user null"
@@ -92,3 +94,22 @@ output [http://localhost:3000/addformat](http://localhost:3000/addformat):
 		"error": "user null"
 	}
 }
+```
+
+##HTTPStatus 
+
+Utility to interact with HTTP status code.
+
+```js
+var status = HTTPStatus.INTERNAL_SERVER_ERROR; //500
+
+```
+
+```
+200: OK 
+400: BAD_REQUEST
+401: UNAUTHORIZED
+404: NOT_FOUND
+500: INTERNAL_SERVER_ERROR 
+```
+[ALL LIST](https://github.com/wdavidw/node-http-status/blob/master/lib/index.js): 
